@@ -749,12 +749,19 @@ for i, (label, vals) in enumerate(dup_data):
         cv.font = FONT_NORMAL; cv.fill = FILL_ALT if i % 2 == 0 else FILL_WHITE
         cv.alignment = ALIGN_RIGHT; cv.border = thin_border()
 
-        if "%" in label:
-            # Color by trend
-            if j == 2:  # 2025
-                is_bad = (v < rat["2024"][label.replace(" (%)", "").lower().replace(" ", "_")] if label.lower().replace(" ", "_").replace("(", "").replace(")", "") not in ["cost-to-income (%)"] else v > rat["2024"]["cost_to_income"])
-                cv.font = Font(name="Calibri", size=10, bold=True,
-                               color="C62828" if is_bad else "2E7D32")
+        if "%" in label and j == 2:
+            # Color by trend: 2025 column
+            is_bad = False
+            if "cost" in label.lower():
+                is_bad = v > rat["2024"]["Cost_to_Income"]
+            elif "roe" in label.lower():
+                is_bad = v < rat["2024"]["ROE"]
+            elif "roa" in label.lower():
+                is_bad = v < rat["2024"]["ROA"]
+            elif "nim" in label.lower():
+                is_bad = v < rat["2024"]["NIM"]
+            cv.font = Font(name="Calibri", size=10, bold=True,
+                           color="C62828" if is_bad else "2E7D32")
 
     yoy = vals[2] - vals[1]
     cy = ws4.cell(row=r, column=5, value=yoy)
@@ -848,8 +855,11 @@ for i, item in enumerate(liq_items):
     c.alignment = ALIGN_CENTER; c.border = thin_border()
 
     cv = vals[2] if vals else 0
-    is_bad = cv/100 < floor if not is_upper else cv/100 > floor
-    is_warn = (cv/100 < floor*1.1 if not is_upper else cv/100 > floor*0.9) and not is_bad
+    if floor and vals:
+        is_bad = cv/100 < floor if not is_upper else cv/100 > floor
+        is_warn = (cv/100 < floor*1.1 if not is_upper else cv/100 > floor*0.9) and not is_bad
+    else:
+        is_bad = False; is_warn = True
     st_fill = FILL_RED if is_bad else (FILL_AMBER if is_warn else FILL_GREEN)
     st_font = FONT_RED if is_bad else (FONT_AMBER if is_warn else FONT_GREEN)
 

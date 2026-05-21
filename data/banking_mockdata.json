@@ -29,7 +29,6 @@
     "2023": {
       "total_assets": 487500,
       "cash_and_gold": 8500,
-      " balances_at_central_bank": 22400,
       "balances_at_other_banks": 35200,
       "loans_to_customers_gross": 325000,
       "loan_loss_provision": 9750,
@@ -48,7 +47,8 @@
       "retained_earnings": 1650,
       "other_equity": 0,
       "total_equity": 29150,
-      "off_balance_sheet_commitments": 45000
+      "off_balance_sheet_commitments": 45000,
+      "balances_at_central_bank": 22400
     },
     "2024": {
       "total_assets": 532800,
@@ -183,7 +183,7 @@
       "Tier1_Ratio": 8.9,
       "NPL_Ratio": 3.5,
       "NPL_Coverage": 62.0,
-      "NIM": 3.30,
+      "NIM": 3.3,
       "ROE": 8.82,
       "ROA": 0.52,
       "Cost_to_Income": 48.22,
@@ -276,7 +276,11 @@
       "severity": "CRITICAL",
       "title": "NPL Ratio vượt ngưỡng cảnh báo 3%",
       "description": "NPL ratio tăng từ 3.0% (2023) lên 4.1% (2025), vượt ngưỡng 3.0% và tiệm cận ngưỡng nguy hiểm 5%. Tốc độ tăng NPL (0.5%/năm) cao hơn trung bình ngành.",
-      "metrics": ["NPL Ratio: 3.0% → 3.5% → 4.1%", "NPL Coverage giảm: 68% → 62% → 58.5%", "Provision tăng chậm hơn NPL"],
+      "metrics": [
+        "NPL Ratio: 3.0% → 3.5% → 4.1%",
+        "NPL Coverage giảm: 68% → 62% → 58.5%",
+        "Provision tăng chậm hơn NPL"
+      ],
       "root_cause": "Áp lực KPI tăng trưởng tín dụng 12.3% (2025) dẫn đến underwriting yếu. Hệ thống early warning chưa tinh vi để phát hiện sớm khách hàng có dấu hiệu suy thoái. Cơ cấu cho vay ngành BĐS và xuất nhập khẩu chiếm tỷ trọng cao, chịu ảnh hưởng biến động tỷ giá và lãi suất.",
       "quick_win": "Tăng dự phòng thêm 5 tỷ VND trong Q1/2026. Rà soát top 50 khách hàng có dấu hiệu suy thoái.",
       "strategic": "Tái cơ cấu danh mục tín dụng, giảm tỷ trọng cho vay ngành rủi ro cao (BĐS, XNK) từ 45% xuống 30% trong 2 năm.",
@@ -289,7 +293,11 @@
       "severity": "HIGH",
       "title": "CAR sát ngưỡng tối thiểu NHNN (8%)",
       "description": "CAR giảm liên tục từ 11.8% (2023) xuống 10.3% (2025). Tier 1 ratio giảm từ 9.5% xuống 8.1%. Khoảng cách an toàn với floor 8% chỉ còn 2.3 điểm phần trăm — rất mỏng.",
-      "metrics": ["CAR: 11.8% → 11.2% → 10.3%", "Tier1: 9.5% → 8.9% → 8.1%", "RWA tăng 14.2% (2025)"],
+      "metrics": [
+        "CAR: 11.8% → 11.2% → 10.3%",
+        "Tier1: 9.5% → 8.9% → 8.1%",
+        "RWA tăng 14.2% (2025)"
+      ],
       "root_cause": "Tăng trưởng tín dụng quá nhanh (trung bình 11.7%/năm) làm RWA tăng theo. Lợi nhuận giữ lại thấp do lợi nhuận 2025 về sát 0. Bank phát hành thêm cổ phiếu nhưng không đủ bù đắp tốc độ tăng RWA. Cổ tức trả bằng tiền mặt 2023-2024 chiếm tỷ lệ cao.",
       "quick_win": "Tạm ngưng trả cổ tức bằng tiền mặt năm 2026. Phát hành trái phiếu Tier 2 trị giá 5.000 tỷ VND.",
       "strategic": "Huy động vốn tăng cường (rights issue hoặc strategic investor) để đưa CAR về mức 12% trong 18 tháng.",
@@ -302,7 +310,11 @@
       "severity": "HIGH",
       "title": "Lợi nhuận 2025 về sát 0 — Khủng hoảng thu nhập",
       "description": "Lợi nhuận trước thuế 2025 về sát 0. NIM giảm từ 3.53% (2023) xuống 2.95% (2025) — mức thấp nhất trong 3 năm. Chi phí hoạt động tăng 28% trong 2 năm. ROE về 0%.",
-      "metrics": ["NIM: 3.53% → 3.30% → 2.95%", "ROE: 14.52% → 8.82% → 0%", "Cost-to-Income: 45.8% → 48.2% → 52.9%"],
+      "metrics": [
+        "NIM: 3.53% → 3.30% → 2.95%",
+        "ROE: 14.52% → 8.82% → 0%",
+        "Cost-to-Income: 45.8% → 48.2% → 52.9%"
+      ],
       "root_cause": "Chi phí vốn tăng nhanh do cạnh tranh huy động tiền gửi với các ngân hàng lớn. Lãi suất cho vay khó tăng do áp lực cạnh tranh và kinh tế chậm phục hồi. Chi phí nhân sự và công nghệ tăng để đáp ứng chuyển đổi số. Đặc biệt, chi phí trích lập dự phòng tăng vọt (+36% vs 2024) do NPL tăng.",
       "quick_win": "Tái đàm phán lãi suất huy động với khách hàng DN lớn. Cắt giảm chi phí vận hành không thiết yếu 10% trong Q1/2026.",
       "strategic": "Chuyển đổi mô hình: giảm phụ thuộc thu nhập lãi, tăng thu nhập phi lãi (fee-based) lên 30% tổng thu nhập.",
@@ -315,7 +327,11 @@
       "severity": "HIGH",
       "title": "LCR giảm sát ngưỡng tối thiểu 100%",
       "description": "LCR giảm từ 125% (2023) xuống 108% (2025), chỉ còn 8 điểm phần trăm trên floor 100%. NSFR cũng giảm từ 108% xuống 102%. LDR tăng vượt ngưỡng cảnh báo 80%.",
-      "metrics": ["LCR: 125 → 118 → 108", "NSFR: 108 → 105 → 102", "LDR: 79.1% → 81.2% → 84.5%"],
+      "metrics": [
+        "LCR: 125 → 118 → 108",
+        "NSFR: 108 → 105 → 102",
+        "LDR: 79.1% → 81.2% → 84.5%"
+      ],
       "root_cause": "Cơ cấu huy động nghiêng về tiền gửi ngắn hạn (dưới 6 tháng chiếm 65%) trong khi cho vay trung và dài hạn tăng. Thị trường liên ngân hàng không ổn định. Bank phụ thuộc quá mức vào vốn vay từ các tổ chức tín dụng khác (51.2 tỷ VND, 10.4% tổng tài sản).",
       "quick_win": "Phát hành kỳ phiếu 12 tháng trị giá 3.000 tỷ VND để kéo dài kỳ hạn huy động. Giảm cho vay ngắn hạn cho khách hàng DN.",
       "strategic": "Tái cơ cấu nguồn vốn: tăng tỷ trọng tiền gửi khách hàng ổn định, giảm phụ thuộc thị trường liên ngân hàng.",
@@ -328,7 +344,11 @@
       "severity": "MEDIUM",
       "title": "Cost-to-Income ratio tăng vượt trung bình ngành",
       "description": "Hệ số chi phí trên thu nhập tăng từ 45.8% (2023) lên 52.9% (2025), vượt ngưỡng trung bình ngành 45%. Đặc biệt chi phí nhân sự tăng 19% trong 2 năm mà năng suất lao động không cải thiện tương xứng.",
-      "metrics": ["Cost-to-Income: 45.8% → 48.2% → 52.9% (benchmark: 45%)", "Staff cost growth: +19.4% (2 năm)", "Other opex growth: +12.1% (2 năm)"],
+      "metrics": [
+        "Cost-to-Income: 45.8% → 48.2% → 52.9% (benchmark: 45%)",
+        "Staff cost growth: +19.4% (2 năm)",
+        "Other opex growth: +12.1% (2 năm)"
+      ],
       "root_cause": "Tuyển dụng mở rộng cho chiến lược chuyển đổi số nhưng hiệu quả chưa đo lường rõ ràng. Hệ thống core banking cũ cần bảo trì cao. Số lượng chi nhánh tăng 12% nhưng doanh số không tăng tương xứng.",
       "quick_win": "Rà soát và cắt giảm các hợp đồng vendor IT không cần thiết. Đánh giá hiệu suất chi nhánh, đóng cửa/ sáp nhập 5 chi nhánh kém hiệu quả.",
       "strategic": "Chiến lược chuyển đổi số toàn diện với KPI rõ ràng. Chuyển đổi chi nhánh sang mô hình hybrid (fewer full-service branches, more digital touchpoints).",
@@ -339,19 +359,28 @@
   "root_causes_summary": [
     {
       "theme": "Mô hình KPI thiên lệch",
-      "affected_weaknesses": ["W001", "W002"],
+      "affected_weaknesses": [
+        "W001",
+        "W002"
+      ],
       "description": "KPI tăng trưởng tín dụng chiếm trọng số quá lớn trong đánh giá hiệu suất, khuyến khích mở rộng rủi ro thay vì chất lượng. Điều này dẫn đến underwriting yếu (W001) và tăng trưởng RWA quá nhanh (W002).",
       "fix": "Cân bằng KPI: Risk-adjusted return (RAROC) thay vì chỉ tăng trưởng dư nợ. Đưa chỉ số NPL vào đánh giá hiệu suất phòng tín dụng."
     },
     {
       "theme": "Phụ thuộc vốn ngắn hạn",
-      "affected_weaknesses": ["W003", "W004"],
+      "affected_weaknesses": [
+        "W003",
+        "W004"
+      ],
       "description": "Cơ cấu nguồn vốn nghiêng về ngắn hạn tạo áp lực lên cả thanh khoản (W004) và chi phí vốn (W003). Đặc biệt trong môi trường lãi suất tăng, chi phí huy động ngắn hạn cao hơn.",
       "fix": "Tái cơ cấu maturity profile: tăng tiền gửi 12-24 tháng. Phát hành trái phiếu dài hạn để cân bằng ALM."
     },
     {
       "theme": "Trích lập dự phòng chưa đủ",
-      "affected_weaknesses": ["W001", "W003"],
+      "affected_weaknesses": [
+        "W001",
+        "W003"
+      ],
       "description": "Chi phí trích lập dự phòng tăng vọt 2025 (+36%) cho thấy Bank đã chậm trích trong các năm trước. Điều này vừa làm NPL coverage giảm (W001), vừa ảnh hưởng trực tiếp lợi nhuận (W003).",
       "fix": "Áp dụng forward-looking provisioning theo IFRS 9. Tăng coverage ratio lên trên 80% trong 12 tháng."
     }
@@ -407,7 +436,10 @@
         "can_export": true,
         "can_manage_users": false,
         "can_comment": false,
-        "view_sections": ["balance_sheet", "income_statement"]
+        "view_sections": [
+          "balance_sheet",
+          "income_statement"
+        ]
       },
       "credit": {
         "label": "Phòng Tín dụng",
@@ -418,7 +450,10 @@
         "can_export": true,
         "can_manage_users": false,
         "can_comment": false,
-        "view_sections": ["asset_quality", "npl_analysis"]
+        "view_sections": [
+          "asset_quality",
+          "npl_analysis"
+        ]
       },
       "marketing": {
         "label": "Phòng KH & Marketing",
@@ -429,7 +464,9 @@
         "can_export": false,
         "can_manage_users": false,
         "can_comment": false,
-        "view_sections": ["dashboard_summary"]
+        "view_sections": [
+          "dashboard_summary"
+        ]
       },
       "branch": {
         "label": "Chi nhánh",
@@ -440,7 +477,9 @@
         "can_export": false,
         "can_manage_users": false,
         "can_comment": false,
-        "view_sections": ["branch_dashboard"]
+        "view_sections": [
+          "branch_dashboard"
+        ]
       }
     }
   }
